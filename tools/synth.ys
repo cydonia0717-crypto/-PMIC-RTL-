@@ -1,0 +1,16 @@
+read_verilog -sv rtl/reset_sync.sv rtl/adc_mailbox.sv rtl/fixed_pid.sv rtl/pwm_deadtime.sv rtl/rail_protection.sv rtl/rail_sequencer.sv rtl/i2c_register_slave.sv rtl/pmic_registers.sv rtl/pmic_top.sv
+hierarchy -check -top pmic_top
+proc
+opt
+memory
+opt
+check -assert
+tee -o build/system-stat.json stat -json
+write_json build/system-netlist.json
+# Generic gate mapping of the arithmetic control block.
+design -reset
+read_verilog -sv rtl/fixed_pid.sv
+synth -top fixed_pid
+check -assert
+tee -o build/pid-stat.json stat -json
+write_json build/pid-netlist.json

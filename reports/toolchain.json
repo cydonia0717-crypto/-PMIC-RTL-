@@ -1,0 +1,11 @@
+{
+  "execution_date": "2026-10-11",
+  "iverilog": "12.0",
+  "verilator": "5.020",
+  "yosys": "0.33",
+  "strict_rtl_lint": "PASS --lint-only --Wall --top-module pmic_top",
+  "test": "PASS 6 unit benches, 28 system cases and independent closed-loop oracle",
+  "cross": "PASS 7 system scenarios, seed=17",
+  "synthesis": "PASS whole-system structural checks and generic PID mapping",
+  "physical_signoff": "not performed"
+}

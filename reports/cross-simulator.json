@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "scenario": 0,
+      "status": "PASS",
+      "output": "PASS pmic scenario=0 seed=17 cycles=153299 I2C/config/sequence/CDC/snapshot/protection/reset\n- tb/tb_pmic.sv:148: Verilog $finish"
+    },
+    {
+      "scenario": 1,
+      "status": "PASS",
+      "output": "PASS pmic scenario=1 seed=17 cycles=185348 I2C/config/sequence/CDC/snapshot/protection/reset\n- tb/tb_pmic.sv:148: Verilog $finish"
+    },
+    {
+      "scenario": 2,
+      "status": "PASS",
+      "output": "PASS pmic scenario=2 seed=17 cycles=185348 I2C/config/sequence/CDC/snapshot/protection/reset\n- tb/tb_pmic.sv:148: Verilog $finish"
+    },
+    {
+      "scenario": 3,
+      "status": "PASS",
+      "output": "PASS pmic scenario=3 seed=17 cycles=185348 I2C/config/sequence/CDC/snapshot/protection/reset\n- tb/tb_pmic.sv:148: Verilog $finish"
+    },
+    {
+      "scenario": 4,
+      "status": "PASS",
+      "output": "PASS pmic scenario=4 seed=17 cycles=185348 I2C/config/sequence/CDC/snapshot/protection/reset\n- tb/tb_pmic.sv:148: Verilog $finish"
+    },
+    {
+      "scenario": 5,
+      "status": "PASS",
+      "output": "PASS pmic scenario=5 seed=17 cycles=185847 I2C/config/sequence/CDC/snapshot/protection/reset\n- tb/tb_pmic.sv:148: Verilog $finish"
+    },
+    {
+      "scenario": 6,
+      "status": "PASS",
+      "output": "PASS pmic scenario=6 seed=17 cycles=188863 I2C/config/sequence/CDC/snapshot/protection/reset\n- tb/tb_pmic.sv:148: Verilog $finish"
+    }
+  ]
+}

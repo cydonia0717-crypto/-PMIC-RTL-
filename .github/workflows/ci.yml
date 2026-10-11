@@ -1,0 +1,37 @@
+name: PMIC RTL verification
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install EDA tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog verilator yosys
+      - name: Strict RTL lint
+        run: make lint
+      - name: Unit, closed-loop and system regression
+        run: make test
+      - name: Second simulator
+        run: make cross
+      - name: Structural synthesis and PID mapping
+        run: make synth
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pmic-verification
+          path: |
+            reports/
+            build/*.trace
+            build/*.csv
+            build/*.log
+            build/*stat.json
+          retention-days: 14

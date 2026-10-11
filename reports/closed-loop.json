@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "samples": 1200,
+  "plant": "first-order integer behavioral model; not analog signoff",
+  "setpoint_step": {
+    "sample": 400,
+    "from": 2048,
+    "to": 2600
+  },
+  "load_step": {
+    "sample": 800,
+    "offset": 400
+  },
+  "settling": [
+    {
+      "window": [
+        350,
+        399
+      ],
+      "max_error_adc_counts": 9
+    },
+    {
+      "window": [
+        750,
+        799
+      ],
+      "max_error_adc_counts": 10
+    },
+    {
+      "window": [
+        1150,
+        1199
+      ],
+      "max_error_adc_counts": 0
+    }
+  ],
+  "final_voltage": 2600
+}

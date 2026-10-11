@@ -1,0 +1,359 @@
+{
+  "status": "PASS",
+  "system_cases": 28,
+  "pid_vectors": 4096,
+  "pwm_cases": 85,
+  "cdc_frames": 2000,
+  "closed_loop_samples": 1200,
+  "unit_tests": [
+    {
+      "name": "pid",
+      "status": "PASS",
+      "output": "PASS pid vectors=4096 latency=3 after acceptance\ntb/tb_pid.sv:26: $finish called at 205160000 (1ps)"
+    },
+    {
+      "name": "pwm",
+      "status": "PASS",
+      "output": "PASS pwm cases=85 deadtime/nooverlap/boundary/kill\ntb/tb_pwm.sv:30: $finish called at 56801000 (1ps)"
+    },
+    {
+      "name": "mailbox",
+      "status": "PASS",
+      "output": "PASS mailbox frames=2000 plus interrupted epoch, async clocks and backpressure\ntb/tb_mailbox.sv:37: $finish called at 221400000 (1ps)"
+    },
+    {
+      "name": "protection",
+      "status": "PASS",
+      "output": "PASS protection cases=6 debounce/reset/qualified/equality/stale/clear\ntb/tb_protection.sv:27: $finish called at 920000 (1ps)"
+    },
+    {
+      "name": "sequencer",
+      "status": "PASS",
+      "output": "PASS sequencer cases=5 exact delays/PG reset/mask/reverse/fault/deadline/W1C\ntb/tb_sequencer.sv:51: $finish called at 1030000 (1ps)"
+    },
+    {
+      "name": "closed_loop",
+      "status": "PASS",
+      "output": "PASS closed_loop samples=1200 final_voltage=2600 target=2600\ntb/tb_closed_loop.sv:32: $finish called at 767440000 (1ps)"
+    }
+  ],
+  "scenario_names": [
+    "normal_masked_start",
+    "undervoltage",
+    "overvoltage",
+    "overcurrent",
+    "external_trip",
+    "sample_stale",
+    "startup_timeout"
+  ],
+  "runs": [
+    {
+      "scenario": 0,
+      "seed": 1,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 0,
+        "seed": 1,
+        "cycles": 153099
+      },
+      "trace_events": 14
+    },
+    {
+      "scenario": 0,
+      "seed": 2,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 0,
+        "seed": 2,
+        "cycles": 153395
+      },
+      "trace_events": 14
+    },
+    {
+      "scenario": 0,
+      "seed": 3,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 0,
+        "seed": 3,
+        "cycles": 153181
+      },
+      "trace_events": 14
+    },
+    {
+      "scenario": 0,
+      "seed": 4,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 0,
+        "seed": 4,
+        "cycles": 153195
+      },
+      "trace_events": 14
+    },
+    {
+      "scenario": 1,
+      "seed": 1,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 1,
+        "seed": 1,
+        "cycles": 185237
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 1,
+      "seed": 2,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 1,
+        "seed": 2,
+        "cycles": 185439
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 1,
+      "seed": 3,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 1,
+        "seed": 3,
+        "cycles": 185323
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 1,
+      "seed": 4,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 1,
+        "seed": 4,
+        "cycles": 185224
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 2,
+      "seed": 1,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 2,
+        "seed": 1,
+        "cycles": 185237
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 2,
+      "seed": 2,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 2,
+        "seed": 2,
+        "cycles": 185439
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 2,
+      "seed": 3,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 2,
+        "seed": 3,
+        "cycles": 185323
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 2,
+      "seed": 4,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 2,
+        "seed": 4,
+        "cycles": 185224
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 3,
+      "seed": 1,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 3,
+        "seed": 1,
+        "cycles": 185237
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 3,
+      "seed": 2,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 3,
+        "seed": 2,
+        "cycles": 185439
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 3,
+      "seed": 3,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 3,
+        "seed": 3,
+        "cycles": 185323
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 3,
+      "seed": 4,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 3,
+        "seed": 4,
+        "cycles": 185224
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 4,
+      "seed": 1,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 4,
+        "seed": 1,
+        "cycles": 185153
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 4,
+      "seed": 2,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 4,
+        "seed": 2,
+        "cycles": 185268
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 4,
+      "seed": 3,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 4,
+        "seed": 3,
+        "cycles": 185236
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 4,
+      "seed": 4,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 4,
+        "seed": 4,
+        "cycles": 185224
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 5,
+      "seed": 1,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 5,
+        "seed": 1,
+        "cycles": 185744
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 5,
+      "seed": 2,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 5,
+        "seed": 2,
+        "cycles": 185853
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 5,
+      "seed": 3,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 5,
+        "seed": 3,
+        "cycles": 185829
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 5,
+      "seed": 4,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 5,
+        "seed": 4,
+        "cycles": 185717
+      },
+      "trace_events": 21
+    },
+    {
+      "scenario": 6,
+      "seed": 1,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 6,
+        "seed": 1,
+        "cycles": 188777
+      },
+      "trace_events": 18
+    },
+    {
+      "scenario": 6,
+      "seed": 2,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 6,
+        "seed": 2,
+        "cycles": 188868
+      },
+      "trace_events": 18
+    },
+    {
+      "scenario": 6,
+      "seed": 3,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 6,
+        "seed": 3,
+        "cycles": 188803
+      },
+      "trace_events": 18
+    },
+    {
+      "scenario": 6,
+      "seed": 4,
+      "status": "PASS",
+      "metrics": {
+        "scenario": 6,
+        "seed": 4,
+        "cycles": 188722
+      },
+      "trace_events": 18
+    }
+  ]
+}
